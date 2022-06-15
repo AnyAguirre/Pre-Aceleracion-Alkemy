@@ -6,13 +6,11 @@ import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
-@SQLDelete(sql= "UPDATE genre SET deleted = true WHERE id=?")
-@Where(clause="deleted=false")
+
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
+@Table(name = "genres")
 public class Genre {
     
     @Id
